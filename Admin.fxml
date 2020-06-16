@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="admin.AdminController">
+   <children>
+      <TabPane fx:id="controlTab" prefHeight="720.0" prefWidth="1280.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab id="addUser" fx:id="addUser" text="Add User">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+          <Tab id="deleteUser" fx:id="deleteUser" text="Delete User">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+          <Tab id="mapLookUp" fx:id="mapLookUp" text="Map Look Up">
+              <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <HBox layoutX="308.0" layoutY="-1.0" prefHeight="691.0" prefWidth="972.0">
+                           <children>
+                              <ListView prefHeight="695.0" prefWidth="979.0" />
+                           </children>
+                        </HBox>
+                        <Separator layoutY="378.0" prefHeight="0.0" prefWidth="309.0" />
+                        <Button id="download" fx:id="download" layoutX="116.0" layoutY="650.0" onAction="#Download" mnemonicParsing="false" text="Download" />
+                        <ImageView fitHeight="249.0" fitWidth="275.0" layoutX="17.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                     </children></AnchorPane>
+              </content>
+          </Tab>
+          <Tab id="uploadMap" fx:id="uploadMap" text="Upload Map">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                </content>
+          </Tab>
+          <Tab id="deleteMap" fx:id="deleteMap" text="Delete Map">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                </content>
+          </Tab>
+            <Tab id="singOut" fx:id="signOut" text="Sign Out">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button id="signOutButton" fx:id="signOutButton" layoutX="609.0" layoutY="332.0" mnemonicParsing="false" onAction="#SignOut" text="Sign Out" />
+                     </children></AnchorPane>
+                </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

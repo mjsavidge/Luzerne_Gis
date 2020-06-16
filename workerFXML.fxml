@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="workers.WorkersController">
+   <children>
+      <TabPane prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="map_look_up" text="Map Look up">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="302.0" prefWidth="599.0">
+                     <children>
+                        <Button fx:id="btn_look_up" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#mapLookUp" prefHeight="26.0" prefWidth="75.0" text="Look Up" textAlignment="CENTER" />
+                        <Line endX="-41.80000305175781" endY="355.60003662109375" layoutX="190.0" layoutY="14.0" startX="-41.80000305175781" startY="-13.999996185302734" />
+                        <HBox layoutX="149.0" prefHeight="371.0" prefWidth="450.0">
+                           <children>
+                              <TableView fx:id="worker_map_display" prefHeight="371.0" prefWidth="452.0" />
+                           </children>
+                        </HBox>
+                        <TextField fx:id="dbStatusMaps" layoutY="342.0" prefHeight="26.0" prefWidth="146.0" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="upload_map" text="Upload Map">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="btnUpload" layoutX="286.0" layoutY="305.0" mnemonicParsing="false" onAction="#btnUpload" text="Upload" />
+                        <Button id="browse_file" fx:id="browse_file" layoutX="489.0" layoutY="47.0" mnemonicParsing="false" onAction="#browse" text="Browse Files" />
+                        <Label id="uploadState" fx:id="uploadState" layoutX="31.0" layoutY="22.0" prefHeight="18.0" prefWidth="136.0" text="" />
+                        <Label layoutX="31.0" layoutY="51.0" prefHeight="18.0" prefWidth="439.0" text="Please pick a map that you would like to add to the database" />
+                        <Line endX="250.0" layoutX="286.0" layoutY="117.0" startX="-250.0" />
+                        <Line endX="250.0" layoutX="287.0" layoutY="250.0" startX="-250.0" />
+                        <Line endX="-96.50001525878906" endY="-43.50000762939453" layoutX="132.0" layoutY="161.0" startX="-95.5" startY="88.5" />
+                        <Line endX="67.5" endY="-27.50000762939453" layoutX="469.0" layoutY="145.0" startX="68.5" startY="104.5" />
+                        <Label id="fileOne" fx:id="fileOne" layoutX="35.0" layoutY="117.0" prefHeight="30.0" prefWidth="502.0" />
+                        <Label id="fileTwo" fx:id="fileTwo" layoutX="35.0" layoutY="150.0" prefHeight="30.0" prefWidth="502.0" textFill="#190000" />
+                        <Label id="fileThree" fx:id="fileThree" layoutX="35.0" layoutY="180.0" prefHeight="30.0" prefWidth="502.0" textFill="#190000" />
+                        <Label layoutX="37.0" layoutY="82.0" text="Please enter the map Name:" />
+                        <TextField id="mapName" fx:id="mapName" layoutX="234.0" layoutY="78.0" prefHeight="26.0" prefWidth="357.0" />
+                        <Label id="fileFour" fx:id="fileFour" layoutX="35.0" layoutY="220.0" prefHeight="30.0" prefWidth="502.0" textFill="#190000" />
+                        <Label layoutX="542.0" layoutY="124.0" text="tif" />
+                        <Label layoutX="542.0" layoutY="155.0" text="tfwx" />
+                        <Label layoutX="542.0" layoutY="185.0" text="aux" />
+                        <Label layoutX="542.0" layoutY="220.0" text="ovr" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="delete_map" text="Delete Map">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button id="delete" fx:id="delete" layoutX="274.0" layoutY="269.0" mnemonicParsing="false" text="Delete" onAction="#deletebtn" />
+                        <TextField id="delete_map_text" fx:id="delete_map_text" layoutX="168.0" layoutY="132.0" prefHeight="25.0" prefWidth="265.0" />
+                        <Label layoutX="169.0" layoutY="71.0" prefHeight="25.0" prefWidth="264.0" text="Please enter map name  to be deleted" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="sign_out" text="Sign Out">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="sign_out_button" layoutX="274.0" layoutY="160.0" mnemonicParsing="false" onAction="#signOut" text="Sign Out" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
